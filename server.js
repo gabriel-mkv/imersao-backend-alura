@@ -1,10 +1,10 @@
 import express from "express";
+import routes from "./src/routes/postsRouts.js";
 
 const app = express();
-app.listen(3000, () => {
-	console.log("Servidor escutando");
-});
+routes(app);
 
-app.get("/api", (req, res) => {
-	res.status(200).send("Bem-vindo a Imersão");
+// Inicia o servidor na porta 3000
+app.listen(3000, () => {
+  console.log("Servidor escutando na porta 3000");
 });
