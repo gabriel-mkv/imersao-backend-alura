@@ -1,6 +1,13 @@
 import express from "express";
 import multer from "multer";
-import { listarPosts, postarNovoPost, uploadImagem } from "../controllers/postsController.js";
+import cors from "cors";
+import { listarPosts, postarNovoPost, uploadImagem, atualizarNovoPost } from "../controllers/postsController.js";
+
+// Define as opções para CORS (Cross-Origin Resource Sharing)
+const corsOptions = {
+  origin: "http://localhost:8000",
+  optinsSucessStatus: 200
+}
 
 // Configura o armazenamento para arquivos enviados
 const storage = multer.diskStorage({
@@ -22,7 +29,10 @@ const upload = multer({dest: "./uploads", storage});
 const routes = (app) => {
     // Habilita o parsing de dados JSON no corpo das requisições
     app.use(express.json());
-  
+
+    // Utiliza o CORS no servidor
+    app.use(cors(corsOptions));
+    
     // Rota GET para listar todos os posts 
     app.get("/posts", listarPosts);
   
@@ -31,8 +41,9 @@ const routes = (app) => {
   
     // Rota POST para upload de imagem com middleware 'upload'
     app.post("/upload", upload.single("imagem"), uploadImagem);
-      // O middleware 'upload.single("imagem")' espera um arquivo com a chave 'imagem'
-      // A função 'uploadImagem' recebe a requisição após o upload ser processado
+    
+    // Rota PUT para atualizar um post no banco de dados
+    app.put("/upload/:id", atualizarNovoPost);
 };
 
 export default routes;
