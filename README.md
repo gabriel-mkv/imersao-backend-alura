@@ -22,8 +22,6 @@ Código do front-end da API: https://github.com/alura-cursos/imersao-backend-gem
 | ![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) | Ambiente de execução JavaScript                 |
 | ![Express.js](https://img.shields.io/badge/express.js-%23404040.svg?style=for-the-badge&logo=express&logoColor=white) | Framework web para Node.js                      |
 | ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)  | Banco de dados NoSQL                             |
-| ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) | Linguagem de marcação para estruturação do conteúdo |
-| ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)   | Linguagem de estilo para estilização da página       |
 | ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=F7DF1E) | Linguagem de programação para interatividade      |
 | ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) | Ferramenta de containerização                     |
 
